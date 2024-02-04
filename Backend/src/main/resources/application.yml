@@ -1,19 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://192.168.1.216:5432/testdatabase
-    username: root
-    password: root
+    url: jdbc:postgresql://db.kkqmcdsnodnidwkqjrxe.supabase.co:5432/postgres
+    username: postgres
+    password: surajpro555@
   jpa:
-    database-platform: org.hibernate.dialect.PosgreSQLInnoDBDialect
-    generate-ddl: true
-    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        globally_quoted_identifiers: true
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
+    show-sql: true
   servlet:
     multipart:
       enabled: true
@@ -24,7 +18,7 @@ spring:
     async:
       request-timeout: 3600000
 server:
-  port: 8080
+  port: 9000
   error:
     path: /user/error
     whitelabel:
